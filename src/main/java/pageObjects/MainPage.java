@@ -27,14 +27,14 @@ public class MainPage {
     private static final By questionSeven = By.id("accordion__heading-6");
     private static final By questionEight = By.id("accordion__heading-7");
     //локаторы для ответов
-    private static final By answerOne = By.id("accordion__heading-0");
-    private static final By answerTwo = By.id("accordion__heading-1");
-    private static final By answerThree = By.id("accordion__heading-2");
-    private static final By answerFour = By.id("accordion__heading-3");
-    private static final By answerFive = By.id("accordion__heading-4");
-    private static final By answerSix = By.id("accordion__heading-5");
-    private static final By answerSeven = By.id("accordion__heading-6");
-    private static final By answerEight = By.id("accordion__heading-7");
+    private static final By answerOne = By.id("accordion__panel-0");
+    private static final By answerTwo = By.id("accordion__panel-1");
+    private static final By answerThree = By.id("accordion__panel-2");
+    private static final By answerFour = By.id("accordion__panel-3");
+    private static final By answerFive = By.id("accordion__panel-4");
+    private static final By answerSix = By.id("accordion__panel-5");
+    private static final By answerSeven = By.id("accordion__panel-6");
+    private static final By answerEight = By.id("accordion__panel-7");
 
     //конструктор для параметризации кнопок с вопросами
     public static final String[] accordionItem = new String[]{
