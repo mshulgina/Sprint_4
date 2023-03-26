@@ -1,6 +1,5 @@
 package pageObjects;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +17,26 @@ public class MainPage {
     private static final By buttonOrderUp = By.className("Button_Button__ra12g");
     //Локатор для кнопки Заказать внизу экрана
     private static final By buttonOrderDown= By.className("Button_Button__ra12g Button_Middle__1CSJM");
-    // Локаторы кнопок с вопросами
+    //локаторы для вопросов
+    private static final By questionOne = By.id("accordion__heading-0");
+    private static final By questionTwo = By.id("accordion__heading-1");
+    private static final By questionThree = By.id("accordion__heading-2");
+    private static final By questionFour = By.id("accordion__heading-3");
+    private static final By questionFive = By.id("accordion__heading-4");
+    private static final By questionSix = By.id("accordion__heading-5");
+    private static final By questionSeven = By.id("accordion__heading-6");
+    private static final By questionEight = By.id("accordion__heading-7");
+    //локаторы для ответов
+    private static final By answerOne = By.id("accordion__heading-0");
+    private static final By answerTwo = By.id("accordion__heading-1");
+    private static final By answerThree = By.id("accordion__heading-2");
+    private static final By answerFour = By.id("accordion__heading-3");
+    private static final By answerFive = By.id("accordion__heading-4");
+    private static final By answerSix = By.id("accordion__heading-5");
+    private static final By answerSeven = By.id("accordion__heading-6");
+    private static final By answerEight = By.id("accordion__heading-7");
+
+    //конструктор для параметризации кнопок с вопросами
     public static final String[] accordionItem = new String[]{
             "accordion__heading-0",
             "accordion__heading-1",
@@ -28,7 +46,7 @@ public class MainPage {
             "accordion__heading-5",
             "accordion__heading-6",
             "accordion__heading-7"};
-    //Локаторы текстов "Вопросы о важном
+    //конструктор для параметризации текстов "Вопросы о важном
     public static final String[]  openPanel = new String[]{
             "accordion__panel-0",
             "accordion__panel-1",
@@ -43,33 +61,31 @@ public class MainPage {
         this.driver = driver;
     }
     // метод нажать на кнопку куки
-    public MainPage checkCookeIsDisplayed(){
-        if (driver.findElement(cookieButton).isDisplayed()){
-            driver.findElement(cookieButton).click();
-        }
-        return this;
+    public void checkCookeIsDisplayed() {
+        driver.findElement(cookieButton).isDisplayed();
+        new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.elementToBeClickable(By.className("App_CookieButton__3cvqF")));
+        driver.findElement(cookieButton).click();
     }
     // метод скролла до Раздела Вопросы о важном
-    public void scrollForQuestionMKAD() throws InterruptedException {
+    public void scrollForQuestionMKAD() {
         WebElement element = driver.findElement(By.id("accordion__heading-7"));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",element);
         }
-    public void clickQuestionButton(String questionButtonLocator) throws InterruptedException {
+    public void clickQuestionButton(String questionButtonLocator) {
         new WebDriverWait(driver, 10)
                 .until(ExpectedConditions.elementToBeClickable(By.id(questionButtonLocator)));
         driver.findElement(By.id(questionButtonLocator)).click();
     }
+    //метод кликнуть по верхней кнопке заказа
     public MainPage clickButtonOrderUp(){
         driver.findElement(buttonOrderUp).click();
         return this;
     }
-    //public void scrollButtonOrderDown() throws InterruptedException {
-
-    //}
+    ////метод кликнуть по нижней кнопке заказа
     public void clickButtonOrderDown(){
         WebElement element = driver.findElement(By.className("Button_Button__ra12g Button_Middle__1CSJM"));
         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",element);
         driver.findElement(buttonOrderDown).click();
     }
-
 }
