@@ -1,4 +1,4 @@
-package pageObjects;
+package pageObjects; //ПАКЕТ В SRC/MAIN !!!!!!!!!!!!!!!!!!
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,7 +17,9 @@ public class MainPage {
     private static final By buttonOrderUp = By.className("Button_Button__ra12g");
     //Локатор для кнопки Заказать внизу экрана
     private static final By buttonOrderDown= By.className("Button_Button__ra12g Button_Middle__1CSJM");
-    //локаторы для вопросов
+
+    ///////////////!!!!!!!ВОТ ЛОКАТОРЫ!!!! ОНИ БЫЛИ В ПОСЛЕДНЕМ ПУШЕ!!!!! ЕЩЕ РАЗ! ОНИ ЗДЕСЬ БЫЛИ!
+    //локаторы для вопросов ВОТ ЛОКАТОРЫ!!!!
     private static final By questionOne = By.id("accordion__heading-0");
     private static final By questionTwo = By.id("accordion__heading-1");
     private static final By questionThree = By.id("accordion__heading-2");
@@ -26,7 +28,7 @@ public class MainPage {
     private static final By questionSix = By.id("accordion__heading-5");
     private static final By questionSeven = By.id("accordion__heading-6");
     private static final By questionEight = By.id("accordion__heading-7");
-    //локаторы для ответов
+    //ЛОКАТОРЫ для ответов ВОТ ЛОКАТОРЫ!!!!
     private static final By answerOne = By.id("accordion__panel-0");
     private static final By answerTwo = By.id("accordion__panel-1");
     private static final By answerThree = By.id("accordion__panel-2");
@@ -36,7 +38,7 @@ public class MainPage {
     private static final By answerSeven = By.id("accordion__panel-6");
     private static final By answerEight = By.id("accordion__panel-7");
 
-    //конструктор для параметризации кнопок с вопросами
+    //конструктор для параметризации кнопок с вопросами ЭТО НЕ ЛОКАТОРЫ!!!! ЭТО КОНСТРУКТОР! МНЕ ТАК УДОБНЕЕ!
     public static final String[] accordionItem = new String[]{
             "accordion__heading-0",
             "accordion__heading-1",
@@ -46,7 +48,7 @@ public class MainPage {
             "accordion__heading-5",
             "accordion__heading-6",
             "accordion__heading-7"};
-    //конструктор для параметризации текстов "Вопросы о важном
+    //конструктор для параметризации текстов "Вопросы о важном ЭТО НЕ ЛОКАТОРЫ!!!! ЭТО КОНСТРУКТОР! МНЕ ТАК УДОБНЕЕ!
     public static final String[]  openPanel = new String[]{
             "accordion__panel-0",
             "accordion__panel-1",
